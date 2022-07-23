@@ -18,16 +18,14 @@ class Wallet{
   String currentAddress = '';
   int currentChain = -1;
 
-  init() {
+  init() async {
     if (Ethereum.isSupported) {
-      connectProvider();
+      await connectProvider();
 
       ethereum!.onAccountsChanged((accs) {
-        clear();
       });
 
       ethereum!.onChainChanged((chain) {
-        clear();
       });
     }
   }

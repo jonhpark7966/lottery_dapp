@@ -22,8 +22,8 @@ class WalletButtonState extends State<WalletButton>{
       return FloatingActionButton.extended(
         label: const Text("Connect"),
         icon: const Icon(Icons.account_balance_wallet_outlined),
-        onPressed: () {
-          wallet.init();
+        onPressed: () async {
+          await wallet.init();
           setState(() {});
           return;
           },
