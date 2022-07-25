@@ -1,4 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:front_flutter/widgets/CurrentContractStatus.dart';
+import 'package:front_flutter/widgets/TicketMachine.dart';
 import 'package:front_flutter/widgets/WalletButton.dart';
 
 
@@ -8,9 +11,19 @@ class HomePage  extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         body: Center(
-          child: Text('Hello World'),
+          child:SizedBox(
+            width: kIsWeb?500.0:double.infinity,
+            child: Column(
+              children: const [
+                SizedBox(height:30),
+                Text("Title"),
+                CurrentContractStatus(),
+                TicketMachine(),
+              ],
+            ),
+          ),
         ),
       floatingActionButton: WalletButton(),
     );
