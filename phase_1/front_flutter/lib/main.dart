@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Lottery DEMO',
       theme: ThemeData(
         brightness: Brightness.dark,
+        accentColor: Colors.purpleAccent,
+        primarySwatch: Colors.deepPurple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
      ),
       routes: {
@@ -23,7 +25,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-

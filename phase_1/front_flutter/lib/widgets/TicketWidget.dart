@@ -21,10 +21,16 @@ class FlutterTicketWidget extends StatefulWidget {
 class _FlutterTicketWidgetState extends State<FlutterTicketWidget> {
   @override
   Widget build(BuildContext context) {
-    return ClipPath(
+    return 
+Material(
+            elevation: 8,
+            shadowColor: Colors.black,
+            borderRadius: BorderRadius.circular(10),
+            child:
+    ClipPath(
       clipper: TicketClipper(),
       child: AnimatedContainer(
-        duration: Duration(seconds: 3),
+        duration: const Duration(seconds: 10),
         width: widget.width,
         height: widget.height,
         child: widget.child,
@@ -34,7 +40,7 @@ class _FlutterTicketWidgetState extends State<FlutterTicketWidget> {
                 ? BorderRadius.circular(10.0)
                 : BorderRadius.circular(0.0)),
       ),
-    );
+    ));
   }
 }
 

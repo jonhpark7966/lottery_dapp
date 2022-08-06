@@ -20,6 +20,7 @@ class WalletButtonState extends State<WalletButton>{
   Widget build(BuildContext context) {
     if(!wallet.isConnected){
       return FloatingActionButton.extended(
+        backgroundColor: Colors.deepPurple.shade100,
         label: const Text("Connect"),
         icon: const Icon(Icons.account_balance_wallet_outlined),
         onPressed: () async {
